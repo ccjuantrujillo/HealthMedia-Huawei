@@ -39,10 +39,19 @@
       const predicted_label = data.predicted_label;
       const scores = data.scores;
       console.log(predicted_label);
-      console.log(scores);
-      /*predict = data.predict;
-      melanoma = data.melanoma;
-      other = data.other;*/
+
+      if (scores) {
+        let label, puntaje;
+        scores.forEach(function(resultado) {
+            label   = resultado[0];
+            puntaje = resultado[1];
+            if (label == 'melanoma') {
+              melanoma = puntaje;
+            }
+            console.log(label + '-' + puntaje);
+        });
+      }
+
       if (predicted_label == "melanoma") {
         message = "Se ha detectado un melanoma";
       } else {
@@ -135,13 +144,13 @@
               </div>
             </li>
             <li>
-              <div class="icon">
+              <!--div class="icon">
                 <p>NEL</p>
-              </div>
-              <div class="item">
+              </div-->
+              <!--div class="item">
                 <h4>Other:</h4>
                 <p>{other}</p>
-              </div>
+              </div-->
             </li>
           </ul>
         </div>
