@@ -3,9 +3,9 @@ import { Service } from "../../../db/models/service";
 
 export async function getStaticPaths() {
   const paths = [
-    { params: { id: "1" } },
-    { params: { id: "2" } },
-    { params: { id: "3" } },
+    //{ params: { id: "1" } },
+   // { params: { id: "2" } },
+   // { params: { id: "3" } },
   ];
   return paths;
 }
