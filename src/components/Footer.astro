@@ -1,0 +1,118 @@
+<footer>
+  <div class="wrapper">
+    <div class="items">
+      <div class="column">
+        <h4>Conócenos</h4>
+        <ul>
+          <li>Nosotros</li>
+          <li>Sedes y clínicas aliadas</li>
+          <li>Staff médico asociado</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Nuestros servicios</h4>
+        <ul>
+          <li>Cáncer de piel</li>
+          <li>¿Cómo activar mi programa?</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Transparencia</h4>
+        <ul>
+          <li>Políticas de Privacidad</li>
+          <li>Términos y Condiciones</li>
+          <li>Fines adicionales</li>
+          <li>Políticas de Calidad</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-us">
+      <h4>¿Quieres formar una alianza?</h4>
+      <p>Se parte de los centros de salud aliados y staff médico.</p>
+      <a href="/" class="btn">Contáctanos</a>
+    </div>
+  </div>
+
+  <div class="divider">
+    <p class="small-text">© 2023 HealthMedia Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<style>
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+
+  .wrapper .items {
+    display: flex;
+    flex-direction: row;
+
+    gap: 3rem;
+    padding: 48px 0px;
+  }
+
+  .wrapper .column h4 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--secondary-600);
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .wrapper .column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style: none;
+
+    font-weight: 200;
+    color: var(--text-gray);
+
+    margin-top: 8px;
+  }
+
+  .wrapper .column ul li {
+    font-weight: 300;
+  }
+
+  .wrapper .contact-us {
+    background-color: var(--secondary-100);
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    max-width: 15rem;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+  .contact-us .btn {
+    border: 2px solid var(--secondary-500);
+    border-radius: 0.25rem;
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-500);
+    background-color: var(--secondary-100);
+  }
+
+  .contact-us .btn:hover {
+    background-color: var(--secondary-200);
+  }
+
+  .divider {
+    width: 100%;
+    border-top: 1px solid var(--secondary-100, #baceeb);
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+</style>

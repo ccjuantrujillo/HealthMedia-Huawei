@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Form from "../../components/Form.svelte";
+
+export async function getStaticPaths() {
+  const paths = [
+    { params: { id: "1" } },
+    { params: { id: "2" } },
+    { params: { id: "3" } },
+  ];
+  return paths;
+}
+
+const { id } = Astro.params;
+
+import { GET } from "../api/service/[id]";
+// @ts-ignore
+const response = await GET(Astro);
+// @ts-ignore
+const data = await response.json();
+const service = data[0];
+---
+
+---
+
+<BaseLayout title={service.serviceName + " | HealthMedia"}>
+  <Form client:load />
+</BaseLayout>

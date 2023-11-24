@@ -1,0 +1,92 @@
+---
+import Staff from "./svgs/Staff.astro";
+import ChequeoPreventivo from "./svgs/Chequeo-preventivo.astro";
+import ClinicasSedes from "./svgs/Clinicas-sedes.astro";
+import Tratamientos from "./svgs/Tratamientos.astro";
+---
+
+<div class="services">
+  <div class="wrapper">
+    <h2>
+      Nuestros <span>Beneficios</span>
+    </h2>
+
+    <div class="service-list">
+      <div class="item-service">
+        <ChequeoPreventivo />
+        <h4>Chequeo preventivo</h4>
+      </div>
+      <div class="item-service">
+        <Tratamientos />
+        <h4>Resultados en segundos</h4>
+      </div>
+      <div class="item-service">
+        <ClinicasSedes />
+        <h4>Ubicar sedes y clínicas</h4>
+      </div>
+      <div class="item-service">
+        <Staff />
+        <h4>Staff médico asociado</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .services {
+    padding: 2rem 0;
+  }
+
+  .services h2 {
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+    color: var(--primary-600);
+  }
+
+  .services h2 span {
+    color: var(--secondary-500);
+    font-weight: 600;
+  }
+
+  .services .service-list {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+
+  .service-list .item-service {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    padding: 32px;
+    max-width: 12rem;
+  }
+
+  .item-service.select {
+    border: 0.25rem solid var(--primary-600);
+    border-radius: 64px 0px 64px 0px;
+    position: relative;
+  }
+
+  .item-service.select .free {
+    border-radius: 8px;
+    background-color: var(--primary-600);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.25rem 1rem;
+    width: fit-content;
+
+    position: absolute;
+    top: -16px;
+    right: 24px;
+  }
+
+  .service-list .item-service h4 {
+    font-size: 16px;
+  }
+</style>

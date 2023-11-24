@@ -1,0 +1,109 @@
+---
+import ServiceImg from "./ServiceImg.astro";
+let { services } = Astro.props;
+
+function limitServiceDescription(description: string): string {
+  const maxLength = 250;
+  if (description.length > maxLength) {
+    return description.substring(0, maxLength) + "...";
+  }
+  return description;
+}
+---
+
+<div class="services">
+  <div class="wrapper">
+    <h2>
+      Nuestros <span>Servicios</span>
+    </h2>
+
+    <div class="service-list">
+      {
+        services.map(
+          (data: {
+            serviceID: number;
+            serviceName: string;
+            serviceDescription: string;
+          }) => (
+            <div class="service-item">
+              <div class="image">
+                <ServiceImg />
+              </div>
+
+              <div class="content">
+                <p class="large-text">{data.serviceName}</p>
+                <p class="description small-text">
+                  {limitServiceDescription(data.serviceDescription)}
+                </p>
+                <a
+                  href={"/diagnostico/" + data.serviceID}
+                  class="btn button-text"
+                >
+                  Comenzar
+                </a>
+              </div>
+            </div>
+          )
+        )
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .services {
+    background-color: var(--secondary-50);
+
+    display: flex;
+    padding: 3rem 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services h2 {
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+    color: var(--primary-600);
+  }
+
+  .services h2 span {
+    color: var(--secondary-500);
+    font-weight: 600;
+  }
+
+  .service-list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-item {
+    display: flex;
+    width: 32.5rem;
+    padding: 1.5rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    background: var(--light);
+    box-shadow: 2px 2px 2px 0px rgba(21, 21, 21, 0.1);
+  }
+
+  .service-item .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .content .description {
+    height: 5rem;
+  }
+  .content .large-text {
+    color: var(--secondary-600);
+    font-weight: 700;
+  }
+
+  .content .btn {
+    width: max-content;
+  }
+</style>

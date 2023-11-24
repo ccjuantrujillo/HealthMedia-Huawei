@@ -1,0 +1,27 @@
+{
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test:db": "tsx src/db/db.ts"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.1",
+    "@astrojs/node": "^6.0.4",
+    "@astrojs/svelte": "^4.0.4",
+    "@fontsource/inter": "^5.0.15",
+    "@fontsource/work-sans": "^5.0.15",
+    "astro": "^3.6.0",
+    "dotenv": "^16.0.3",
+    "mysql2": "^3.6.5",
+    "sequelize": "^6.35.1",
+    "svelte": "^5.0.0-next.1",
+    "tsx": "^4.3.0",
+    "typescript": "^5.3.2"
+  }
+}

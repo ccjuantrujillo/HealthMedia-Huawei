@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
+import Steps from "../components/Steps.astro";
+---
+
+<BaseLayout title="Diagnósticos al instante | HealthMedia">
+  <div class="promo">
+    <div class="wrapper">
+      <p class="first-text">
+        ¡Inicia tu protección mediante diagnósticos rápidos!
+      </p>
+      <p>Comienza con tus diagnósticos</p>
+      <a href="/servicios">
+        <b>Ver servicios</b>
+        <svg
+          width="16"
+          height="17"
+          viewBox="0 0 16 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect y="0.5" width="16" height="16" rx="8" fill="#1A5BBC"></rect>
+          <path
+            d="M6.5 11.5L9.5 8.5L6.5 5.5"
+            stroke="#F4F4F4"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <Hero />
+  <Services />
+  <!--<Case />-->
+  <Steps />
+</BaseLayout>
+
+<style>
+  .promo {
+    background: var(--secondary-50, #e8eff8);
+    padding: 1rem;
+  }
+
+  .promo .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .promo .first-text {
+    color: var(--primary-600, #4fb6d2);
+    font-weight: 700;
+  }
+
+  .promo a {
+    color: var(--secondary-500, #1a5bbc);
+    font-family: Inter;
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .promo a:hover {
+    text-decoration-line: underline;
+  }
+</style>
